@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0-*",
+  "description": "Fixtures Generator Library",
+  "buildOptions": {
+    "debugType": "portable",
+    "outputName": "FixturesGenerator"
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0",
+        "Microsoft.Extensions.Logging": "1.0.0",
+        "Microsoft.Extensions.Logging.Debug": "1.0.0"
+      }
+    }
+  }
+}

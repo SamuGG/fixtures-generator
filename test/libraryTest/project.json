@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0-*",
+  "description": "Fixtures Generator Library Tests",
+  "buildOptions": {
+    "debugType": "portable",
+    "outputName": "FixturesGeneratorTests",
+    "copyToOutput": "csv/*.csv"
+  },
+  "testRunner": "xunit",
+  "dependencies": {
+    "library": {
+      "target": "project"
+    },
+    "xunit": "2.2.0-beta2-build3300",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}

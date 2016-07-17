@@ -1,0 +1,12 @@
+A,B,C,D,E,F,G,H,I,J,K,L
+A,B;C,D;E,F;G,H;I,J;K,L
+A,C;B,D;E,G;F,H;I,K;J,L
+A,D;B,C;E,H;F,G;I,L;J,K
+A,E;B,F;C,I;D,J;G,K;H,L
+A,F;B,E;C,J;D,I;G,L;H,K
+A,G;B,H;C,K;D,L;E,I;F,J
+A,H;B,G;C,L;D,K;E,J;F,I
+A,I;B,J;C,G;D,H;E,K;F,L
+A,J;B,I;C,H;D,G;E,L;F,K
+A,K;B,L;C,E;D,F;G,I;H,J
+A,L;B,K;C,F;D,E;G,J;H,I

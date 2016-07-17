@@ -1,0 +1,14 @@
+A,B,C,D,E,F,G,H,I,J,K,L,M,N
+A,B;C,D;E,F;G,H;I,J;K,L;M,N
+A,C;B,D;E,G;F,H;I,K;J,M;L,N
+A,D;B,C;E,H;F,G;I,L;J,N;K,M
+A,E;B,F;C,G;D,H;I,M;J,L;K,N
+A,F;B,E;C,H;D,G;I,N;J,K;L,M
+A,G;B,I;C,J;D,K;E,L;F,M;H,N
+A,H;B,J;C,I;D,L;E,K;F,N;G,M
+A,I;B,G;C,K;D,J;E,N;F,L;H,M
+A,J;B,H;C,L;D,I;E,M;F,K;G,N
+A,K;B,M;C,E;D,N;F,I;G,J;H,L
+A,L;B,N;C,F;D,M;E,I;G,K;H,J
+A,M;B,K;C,N;D,E;F,J;G,L;H,I
+A,N;B,L;C,M;D,F;E,J;G,I;H,K
