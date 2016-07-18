@@ -3,15 +3,15 @@
   "description": "Fixtures Generator Library",
   "language": "en",
   "version": "0.1.0-*",
-  "authors": [ "Samuel Granados García" ],
+  "authors": [ "Samuel Granados" ],
   "packOptions": {
     "repository": {
       "type": "git",
       "url": "https://github.com/samugg/fixtures-generator"
     },
-    "licenseUrl": "https://github.com/samugg/fixtures-generator/LICENSE.md",
+    "licenseUrl": "https://github.com/samugg/fixtures-generator/blob/master/LICENSE.md",
     "summary": "Fixtures generator library for sports applications.",
-    "owners": [ "Samuel Granados García" ],
+    "owners": [ "Samuel Granados" ],
     "tags": [ "fixture" ]
   },
   "buildOptions": {

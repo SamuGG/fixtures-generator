@@ -26,6 +26,14 @@ var output = generator.GetFixtures(elements, CancellationToken.None);
 
 See the [documentation](docs/Documentation.md) to know how to use it.
 
+## Installation
+
+Get the [nuget package](https://www.nuget.org/packages/FixturesGenerator/)
+
 ## Contributing
 
 Please read the [contribution guidelines](docs/Contributing.md)
+
+## License
+
+[MIT license](https://opensource.org/licenses/MIT)
