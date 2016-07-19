@@ -35,7 +35,7 @@ namespace FixturesGenerator.Base
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private string DebuggerDisplay
         {
-            get { return $"({Item1}, {Item2})"; }
+            get { return this.ToString(); }
         }
     }
 }
