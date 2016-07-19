@@ -167,7 +167,7 @@ namespace FixturesGenerator.Base
             else
             {
                 // discard partial solution and return an empty result
-                return FixtureSets<T>.NewItem();;
+                return FixtureSets<T>.NewItem();
             }
         }
     }
