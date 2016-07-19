@@ -6,8 +6,6 @@ Although it can be used to get combinations of elements, returned in a collectio
 
 ## How To Use It
 
-Given the following elements: Team1, Team2, Team3, Team4; return a collection of pair-sets:
-
 ```csharp
 string[] elements = new string[4] { "Team1", "Team2", "Team3", "Team4" };
 var generator = new LeagueFixturesGenerator<string>();
@@ -28,7 +26,9 @@ See the [documentation](docs/Documentation.md) to know how to use it.
 
 ## Installation
 
-Get the [nuget package](https://www.nuget.org/packages/FixturesGenerator/)
+Install the [nuget package](https://www.nuget.org/packages/FixturesGenerator/) in your project to start using it.
+
+    Install-Package FixturesGenerator
 
 ## Contributing
 
@@ -36,4 +36,4 @@ Please read the [contribution guidelines](docs/Contributing.md)
 
 ## License
 
-[MIT license](https://opensource.org/licenses/MIT)
+[MIT license](LICENSE.md)

@@ -98,7 +98,7 @@ using FixturesGenerator.Pairs;
 char[] elements = new char[4] { 'A', 'B', 'C', 'D' };
 
 var generator = new PairsGenerator<char>();
-generator.Configure(new PairsGeneratorSettings(true));
+generator.Configure(new PairsGeneratorSettings(false, true));
 
 var roundFixtures = generator.GetFixtures(elements, CancellationToken.None);
 
@@ -121,9 +121,28 @@ var roundFixtures = generator.GetFixtures(elements, CancellationToken.None);
 This generator is more close to what sports leagues would generate.
 It shuffles the elements to give random fixtures each time and includes first leg and second leg fixtures in the result.
 
-Also, tries to switch elements position between sets, which gives as result an element as primary in one set, secondary in the foloowing set, primary again in the following set, secondary again in the following set, etc.
-With this it solves the problem of having a team playing home one round, away in the following round, home in the following, away in the following, etc.
+Also, tries to switch elements position between sets, which gives as result an element as primary in one set, secondary in the following set, primary again in the following set, secondary again in the following set, etc.
+
+With this, it solves the problem of having a team playing home one round, away in the following round, home in the following, away in the following, etc.
 
 The use is the same shown in the `PairsGenerator` class.
+
+Example:
+
+```csharp
+using FixturesGenerator.Base;
+using FixturesGenerator.League;
+using System.Threading;
+using System.Threading.Tasks;
+
+public void async Task<FixtureSets<string>> GenerateLeagueFixturesAsync(IEnumerable<string> teams)
+{
+    var generator = new LeagueFixturesGenerator<string>();
+    return await Task.Run(() => generator.GetFixtures(teams, CancellationToken.None));
+}
+```
+
+**Advise:** When the number of elements to combine is high, it is recommended to use an asynchronous pattern, like shown above, to run the process in background.
+Your application can terminate the background thread if needed by using the [cancellation token](#cancel-process).  
 
 [top](#toc)
