@@ -2,7 +2,7 @@
   "title": "Fixtures Generator Library",
   "description": "Fixtures Generator Library",
   "language": "en",
-  "version": "0.1.0-*",
+  "version": "0.2.0-*",
   "authors": [ "Samuel Granados" ],
   "packOptions": {
     "repository": {
@@ -30,7 +30,7 @@
     },
     "net451": {
       "frameworkAssemblies": {
-        "System.Runtime": "4.0.10.0"
+        "System.Runtime": "4.0.0.0"
       }
     }
   }

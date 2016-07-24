@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace FixturesGenerator.Base.Tests
@@ -22,6 +23,23 @@ namespace FixturesGenerator.Base.Tests
         public void IsRelatedWhenTheyShareAnyComponent(Pair<char> pair1, Pair<char> pair2, bool expectedResult)
         {
             Assert.Equal(expectedResult, pair1.IsRelatedTo(pair2));
+        }
+
+        [Fact]
+        public void UnrelatedItemsReturnsItemsNotRelated()
+        {
+            // Arrange
+            var item1 = new Pair<char>('A', 'B');
+            var item2 = new Pair<char>('C', 'D');
+            var items = new List<Pair<char>>(new []{item1, item2});
+
+            // Act
+            var unrelatedItems = items.UnrelatedItems(item1);
+
+            // Assert
+            Assert.NotEmpty(unrelatedItems);
+            Assert.Equal(item2, unrelatedItems.First());
+            Assert.False(item1.IsRelatedTo(item2));
         }
 
         [Fact]
