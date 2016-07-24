@@ -47,7 +47,7 @@ namespace FixturesGenerator.League
             for (int i = 1, maxPosition = fixturesList.Count / 2; i < maxPosition; i += 2)
             {
                 int j = fixturesList.Count - 1 - i;
-                _logger.LogDebug($"Swaping positions {i} and {j}");
+                _logger.LogDebug($"Swapping positions {i} and {j}");
                 fixturesList.SwapPositions(i, j);
             }
 
