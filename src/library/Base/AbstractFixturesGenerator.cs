@@ -172,7 +172,7 @@ namespace FixturesGenerator.Base
                     if (!cancellationToken.IsCancellationRequested && validItems.Count > 0)
                     {
                         // restore previous options list
-                        availableItems.InsertRange(0, optionsListStates.Pop());
+                        availableItems = new List<Pair<T>>(optionsListStates.Pop());
                         
                         // log undo step
                         var previousValidItem = validItems[validItems.Count - 1];
