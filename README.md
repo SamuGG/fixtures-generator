@@ -1,34 +1,50 @@
 # Fixtures Generator
 
-This library project made in C# is mainly used for **generation of league fixtures** providing **sports applications** an easier way to generate them.
-
-Although it can be used to get combinations of elements, returned in a collection or pair sets.
-
-## How To Use It
-
-```csharp
-string[] elements = new string[4] { "Team1", "Team2", "Team3", "Team4" };
-var generator = new LeagueFixturesGenerator<string>();
-var output = generator.GetFixtures(elements, CancellationToken.None);
-
-// output
-// [
-//   [ {"Team4", "Team3"}, {"Team1", "Team2"} ],
-//   [ {"Team1", "Team4"}, {"Team2", "Team3"} ],
-//   [ {"Team4", "Team2"}, {"Team3", "Team1"} ],
-//   [ {"Team3", "Team4"}, {"Team2", "Team1"} ],
-//   [ {"Team4", "Team1"}, {"Team3", "Team2"} ],
-//   [ {"Team1", "Team3"}, {"Team2", "Team4"} ]
-// ]
-```
-
-See the [documentation](docs/Documentation.md) to know how to use it.
+This library project made in C# is mainly used for **generation of league fixtures** providing **sports applications** an automated way of generating them.
 
 ## Installation
 
-Install the [nuget package](https://www.nuget.org/packages/FixturesGenerator/) in your project to start using it.
+Install the [nuget package](https://www.nuget.org/packages/FixturesGenerator/) in your project.
 
     Install-Package FixturesGenerator
+
+## Basic Usage
+
+```csharp
+    using System;
+    using FixturesGenerator.Generators;
+
+    public class MyClass
+    {
+        public void Run()
+        {
+            const byte numElements = 4;
+            string[] elements = new string[numElements] { "Team1", "Team2", "Team3", "Team4" };
+            
+            LeagueFixturesGenerator fixturesGenerator = new LeagueFixturesGenerator();
+            int[,,] fixturesIndexes = fixturesGenerator.GenerateFixtures(numElements);
+            // 3D array accessed: [round, match, local/visitor]
+
+            // Print first match
+            int localTeamIndex = fixturesIndexes[0, 0, 0];   
+            int visitorTeamIndex = fixturesIndexes[0, 0, 1];
+            Console.WriteLine($"{elements[localTeamIndex]} vs {elements[visitorTeamIndex]}");
+
+            // Print second match
+            localTeamIndex = fixturesIndexes[0, 1, 0];
+            visitorTeamIndex = fixturesIndexes[0, 1, 1];
+            Console.WriteLine($"{elements[localTeamIndex]} vs {elements[visitorTeamIndex]}");
+
+            // Print 3rd round, 2nd match
+            localTeamIndex = fixturesIndexes[2, 1, 0];
+            visitorTeamIndex = fixturesIndexes[2, 1, 1];
+            Console.WriteLine($"{elements[localTeamIndex]} vs {elements[visitorTeamIndex]}");
+        }
+    } 
+````
+## Documentation
+
+Read more documentation [here](docs/Documentation.md)
 
 ## Contributing
 

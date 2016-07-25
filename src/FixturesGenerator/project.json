@@ -1,0 +1,29 @@
+{
+  "description": "Fixtures Generator Library",
+  "language": "en",
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netstandard1.0": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    },
+    "net40": {}
+  },
+  "authors": [ "Samuel Granados Garcia" ],
+   "packOptions": {
+     "repository": {
+       "type": "git",
+       "url": "https://github.com/samugg/fixtures-generator"
+     },
+     "licenseUrl": "https://github.com/samugg/fixtures-generator/blob/master/LICENSE.md",
+     "summary": "Fixtures generator library for sports applications.",
+     "releaseNotes": "https://github.com/samugg/fixtures-generator/blob/master/docs/ReleaseNotes.md",
+     "owners": [ "Samuel Granados Garcia" ],
+     "tags": [ "fixture", "generator", "league" ]
+   }
+}
